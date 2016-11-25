@@ -17,6 +17,9 @@
 		0D4C18EA1DC3F61600DB8749 /* TableViewControllerCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4C18E91DC3F61600DB8749 /* TableViewControllerCounter.swift */; };
 		0DD339461DE3210E000055AD /* ViewControllerAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD339451DE3210E000055AD /* ViewControllerAdd.swift */; };
 		0DD3C5701DD10B860075D455 /* ViewControllerCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD3C56F1DD10B860075D455 /* ViewControllerCounter.swift */; };
+		0DF693661DE80C44007F2C6C /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0DF693631DE80C44007F2C6C /* background.jpg */; };
+		0DF693671DE80C44007F2C6C /* background@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0DF693641DE80C44007F2C6C /* background@2x.jpg */; };
+		0DF693681DE80C44007F2C6C /* background@3x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0DF693651DE80C44007F2C6C /* background@3x.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		0D4C18E91DC3F61600DB8749 /* TableViewControllerCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerCounter.swift; sourceTree = "<group>"; };
 		0DD339451DE3210E000055AD /* ViewControllerAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAdd.swift; sourceTree = "<group>"; };
 		0DD3C56F1DD10B860075D455 /* ViewControllerCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerCounter.swift; sourceTree = "<group>"; };
+		0DF693631DE80C44007F2C6C /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		0DF693641DE80C44007F2C6C /* background@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@2x.jpg"; sourceTree = "<group>"; };
+		0DF693651DE80C44007F2C6C /* background@3x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "background@3x.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 				0D4C18C41DC3F5C100DB8749 /* LaunchScreen.storyboard */,
 				0D4C18C71DC3F5C100DB8749 /* Info.plist */,
 				0D4C18BF1DC3F5C100DB8749 /* CounterApp.xcdatamodeld */,
+				0DF693621DE80C44007F2C6C /* Images */,
 			);
 			path = CounterApp;
 			sourceTree = "<group>";
@@ -132,6 +139,16 @@
 				0D4C18DD1DC3F5C100DB8749 /* Info.plist */,
 			);
 			path = CounterAppUITests;
+			sourceTree = "<group>";
+		};
+		0DF693621DE80C44007F2C6C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0DF693631DE80C44007F2C6C /* background.jpg */,
+				0DF693641DE80C44007F2C6C /* background@2x.jpg */,
+				0DF693651DE80C44007F2C6C /* background@3x.jpg */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,7 +256,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D4C18C61DC3F5C100DB8749 /* LaunchScreen.storyboard in Resources */,
+				0DF693681DE80C44007F2C6C /* background@3x.jpg in Resources */,
+				0DF693661DE80C44007F2C6C /* background.jpg in Resources */,
 				0D4C18C31DC3F5C100DB8749 /* Assets.xcassets in Resources */,
+				0DF693671DE80C44007F2C6C /* background@2x.jpg in Resources */,
 				0D4C18BE1DC3F5C100DB8749 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
