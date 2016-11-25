@@ -12,11 +12,14 @@ import CoreData
 class ViewControllerCounter: UIViewController {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelCounter: UILabel!
+    @IBOutlet weak var labelProgressBar: UILabel!
     
-    var indexPathRow : Int = 0
-    var addingNumber : Int = 1
+    @IBOutlet weak var progressBar: UIProgressView!
     
-    var counterObjects = [NSManagedObject]()
+    private var indexPathRow : Int = 0
+    private var addingNumber : Int = 1
+    
+    private var counterObjects = [NSManagedObject]()
 
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button10: UIButton!
@@ -25,25 +28,15 @@ class ViewControllerCounter: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        SetInitialLookButton(button1)
+        SetInitialLookButton(button10)
+        SetInitialLookButton(button100)
         SetButtonColor(button1)
-        //button1.backgroundColor = .clear
-        button1.layer.cornerRadius = 0.5 * button1.bounds.size.width
-        button1.layer.borderWidth = 3.0
-        button1.clipsToBounds = true
-        button1.layer.borderColor = UIColor.whiteColor().CGColor
         
-        button10.layer.cornerRadius = 0.5 * button1.bounds.size.width
-        button10.layer.borderWidth = 3.0
-        button10.clipsToBounds = true
-        button1.layer.borderColor = UIColor.whiteColor().CGColor
+        let imageView = UIImageView(frame: UIScreen.mainScreen().bounds)
+        imageView.image = UIImage(named: "background")
+        self.view.insertSubview(imageView, atIndex: 0)
         
-        button100.layer.cornerRadius = 0.5 * button1.bounds.size.width
-        button100.layer.borderWidth = 3.0
-        button100.clipsToBounds = true
-        button1.layer.borderColor = UIColor.whiteColor().CGColor
-        //button1.titleEdgeInsets
-        //button1.layer.borderColor = UIColor.black.cgColor
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,7 +44,7 @@ class ViewControllerCounter: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+   override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -66,10 +59,13 @@ class ViewControllerCounter: UIViewController {
         }   catch let error as NSError{
             print("Couldn't save \(error)")
         }
-        labelCounter.text = (counterObjects[indexPathRow].valueForKey("counterNumber") as? NSNumber)?.stringValue
+    
+        SetLabels()
+    
     }
     
-    func SetCounter(number : Int){
+    
+    func AddNumber(number : Int){
         
         let counter = counterObjects[indexPathRow]
         
@@ -82,15 +78,15 @@ class ViewControllerCounter: UIViewController {
         }   catch let error as NSError{
             print("Couldn't save \(error)")
         }
-        labelCounter.text = (counter.valueForKey("counterNumber") as? NSNumber)?.stringValue
+        SetLabels()
     }
     
     @IBAction func PlusButton(sender: AnyObject) {
-        SetCounter(addingNumber)
+        AddNumber(addingNumber)
     }
     
     @IBAction func MinusButton(sender: AnyObject) {
-        SetCounter(addingNumber*(-1))
+        AddNumber(addingNumber*(-1))
     }
     
     @IBAction func button1(sender: AnyObject) {
@@ -118,11 +114,42 @@ class ViewControllerCounter: UIViewController {
         button.layer.borderColor = UIColor.whiteColor().CGColor
     }
     
-
-}
-
-extension UIColor{
-    static func appleBlue() -> UIColor{
-        return UIColor.init(colorLiteralRed: 14.0/255, green: 122.0/255, blue: 254.0/255, alpha: 1.0)
+    func SetInitialLookButton(button : UIButton){
+        button.layer.cornerRadius = 0.5 * button.bounds.size.width
+        button.layer.borderWidth = 3.0
+        button.clipsToBounds = true
+        button.layer.borderColor = UIColor.whiteColor().CGColor
     }
+    
+    func SetLabels(){
+        labelCounter.text = (counterObjects[indexPathRow].valueForKey("counterNumber") as? NSNumber)?.stringValue
+        
+        let number = (counterObjects[indexPathRow].valueForKey("counterNumber") as? NSNumber)!.integerValue
+        let goal = (counterObjects[indexPathRow].valueForKey("goalNumber") as? NSNumber)?.floatValue
+        
+        if(goal == 0){
+            labelProgressBar.hidden = true
+            progressBar.hidden = true
+        }
+            
+        else{
+            if(Float(number) < goal){
+                let progressNumber : Float = (Float(number))/(goal)!
+                progressBar.setProgress(progressNumber, animated: true)
+                labelProgressBar.text = String(Int(progressNumber * 100)) + "%"
+            }
+                
+            else{
+                progressBar.setProgress(1.0, animated: true)
+                labelProgressBar.text = "100%"
+            }
+        }
+    }
+    
+    func SetIndexPathRow(indexRow : Int){
+        indexPathRow = indexRow
+    }
+    
+
 }
+

@@ -15,8 +15,8 @@
 		0D4C18D11DC3F5C100DB8749 /* CounterAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4C18D01DC3F5C100DB8749 /* CounterAppTests.swift */; };
 		0D4C18DC1DC3F5C100DB8749 /* CounterAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4C18DB1DC3F5C100DB8749 /* CounterAppUITests.swift */; };
 		0D4C18EA1DC3F61600DB8749 /* TableViewControllerCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4C18E91DC3F61600DB8749 /* TableViewControllerCounter.swift */; };
+		0DD339461DE3210E000055AD /* ViewControllerAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD339451DE3210E000055AD /* ViewControllerAdd.swift */; };
 		0DD3C5701DD10B860075D455 /* ViewControllerCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD3C56F1DD10B860075D455 /* ViewControllerCounter.swift */; };
-		0DD3C5721DD12C2C0075D455 /* CounterStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD3C5711DD12C2C0075D455 /* CounterStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +51,8 @@
 		0D4C18DB1DC3F5C100DB8749 /* CounterAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterAppUITests.swift; sourceTree = "<group>"; };
 		0D4C18DD1DC3F5C100DB8749 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D4C18E91DC3F61600DB8749 /* TableViewControllerCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewControllerCounter.swift; sourceTree = "<group>"; };
+		0DD339451DE3210E000055AD /* ViewControllerAdd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAdd.swift; sourceTree = "<group>"; };
 		0DD3C56F1DD10B860075D455 /* ViewControllerCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerCounter.swift; sourceTree = "<group>"; };
-		0DD3C5711DD12C2C0075D455 /* CounterStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				0D4C18B81DC3F5C000DB8749 /* AppDelegate.swift */,
-				0DD3C5711DD12C2C0075D455 /* CounterStruct.swift */,
 				0D4C18E91DC3F61600DB8749 /* TableViewControllerCounter.swift */,
 				0DD3C56F1DD10B860075D455 /* ViewControllerCounter.swift */,
+				0DD339451DE3210E000055AD /* ViewControllerAdd.swift */,
 				0D4C18BC1DC3F5C100DB8749 /* Main.storyboard */,
 				0D4C18C21DC3F5C100DB8749 /* Assets.xcassets */,
 				0D4C18C41DC3F5C100DB8749 /* LaunchScreen.storyboard */,
@@ -266,9 +266,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D4C18B91DC3F5C000DB8749 /* AppDelegate.swift in Sources */,
-				0DD3C5721DD12C2C0075D455 /* CounterStruct.swift in Sources */,
 				0DD3C5701DD10B860075D455 /* ViewControllerCounter.swift in Sources */,
 				0D4C18C11DC3F5C100DB8749 /* CounterApp.xcdatamodeld in Sources */,
+				0DD339461DE3210E000055AD /* ViewControllerAdd.swift in Sources */,
 				0D4C18EA1DC3F61600DB8749 /* TableViewControllerCounter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

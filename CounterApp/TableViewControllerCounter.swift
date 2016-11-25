@@ -11,13 +11,13 @@ import CoreData
 
 class TableViewControllerCounter: UITableViewController {
     
-    var counterObjects = [NSManagedObject]()
+    private var counterObjects = [NSManagedObject]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let imageView = UIImageView(frame: self.view.frame)
-        imageView.image = UIImage(named: "wallpaper")
+        imageView.image = UIImage(named: "background")
         self.tableView.backgroundView = imageView
         
     }
@@ -50,7 +50,6 @@ extension TableViewControllerCounter{
         
         cell.textLabel?.text = counter.valueForKey("title") as? String
         cell.textLabel?.textColor = UIColor.whiteColor()
-        //cell.detailTextLabel?.text = counter.valueForKey("counterNumber") as? String
         cell.detailTextLabel?.text = counterNum
         cell.detailTextLabel?.textColor = UIColor.whiteColor()
         
@@ -60,7 +59,7 @@ extension TableViewControllerCounter{
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.backgroundColor = .clearColor()
     }
-    
+    /*
     @IBAction func buttonAdd(sender: AnyObject) {
         
         let alert = UIAlertController(title: "New counter", message: "Add a new counter", preferredStyle: .Alert)
@@ -85,7 +84,7 @@ extension TableViewControllerCounter{
         
         presentViewController(alert, animated: true, completion: nil)
     }
-    
+
     func SaveCounter(title: String){
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
@@ -108,6 +107,7 @@ extension TableViewControllerCounter{
             print("Couldn't save \(error)")
         }
     }
+    */
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -145,13 +145,20 @@ extension TableViewControllerCounter{
         
         tableView.tableFooterView = UIView(frame: CGRectZero)
         
+        self.tableView.reloadData()
+        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let indexPath = self.tableView.indexPathForSelectedRow
         
-        let destView = segue.destinationViewController as! ViewControllerCounter
-        destView.indexPathRow = indexPath!.row
+        let indexPath = self.tableView.indexPathForSelectedRow
+        if segue.identifier == "VCCounter"{
+            let destView = segue.destinationViewController as! ViewControllerCounter
+        
+            destView.SetIndexPathRow(indexPath!.row)
+        
+        }
         
     }
 }
+
