@@ -9,21 +9,23 @@
 import UIKit
 import CoreData
 
+//VIEW CONTROLLER TO DISPLAY COUNTER, INCREASE OR DECREASE BY PRESSING + OR - BUTTON, SET ADDING VALUE BY PRESSING 1, 10 OR 100 BUTTON
+
 class ViewControllerCounter: UIViewController {
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var labelCounter: UILabel!
     @IBOutlet weak var labelProgressBar: UILabel!
     
     @IBOutlet weak var progressBar: UIProgressView!
+
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button10: UIButton!
+    @IBOutlet weak var button100: UIButton!
     
     private var indexPathRow : Int = 0
     private var addingNumber : Int = 1
     
     private var counterObjects = [NSManagedObject]()
-
-    @IBOutlet weak var button1: UIButton!
-    @IBOutlet weak var button10: UIButton!
-    @IBOutlet weak var button100: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +40,8 @@ class ViewControllerCounter: UIViewController {
         self.view.insertSubview(imageView, atIndex: 0)
         
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -81,6 +85,7 @@ class ViewControllerCounter: UIViewController {
         SetLabels()
     }
     
+    //BUTTONS
     @IBAction func PlusButton(sender: AnyObject) {
         AddNumber(addingNumber)
     }
@@ -102,6 +107,8 @@ class ViewControllerCounter: UIViewController {
         SetButtonColor(button100)
         addingNumber = 100
     }
+    
+    
     
     func SetButtonColor(button : UIButton){
         button1.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)

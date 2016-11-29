@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+//TABLEVIEW CONTROLLER TO DISPLAY ALL COUNTERS FROM CORE DATA
+
 class TableViewControllerCounter: UITableViewController {
     
     private var counterObjects = [NSManagedObject]()
@@ -59,55 +61,6 @@ extension TableViewControllerCounter{
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         cell.backgroundColor = .clearColor()
     }
-    /*
-    @IBAction func buttonAdd(sender: AnyObject) {
-        
-        let alert = UIAlertController(title: "New counter", message: "Add a new counter", preferredStyle: .Alert)
-        
-        let saveAction = UIAlertAction(title: "Save", style: .Default) { (UIAlertAction) -> Void in
-            let textField = alert.textFields!.first
-            self.SaveCounter(textField!.text!)
-            self.tableView.reloadData()
-            
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .Default) { (UIAlertAction) -> Void in
-            
-        }
-        
-        alert.addTextFieldWithConfigurationHandler { (UITextField) -> Void in
-            
-        }
-        
-        alert.addAction(saveAction)
-        alert.addAction(cancelAction)
-        
-        presentViewController(alert, animated: true, completion: nil)
-    }
-
-    func SaveCounter(title: String){
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        let managedContext = appDelegate.managedObjectContext
-        
-        let entity = NSEntityDescription.entityForName("Counter", inManagedObjectContext: managedContext)
-        
-        let counter = NSManagedObject(entity: entity!, insertIntoManagedObjectContext: managedContext)
-        
-        //let array = [("neco",10)]
-        
-        counter.setValue(title, forKey: "title")
-        counter.setValue(NSNumber(short: 0), forKey: "counterNumber")
-        //counter.setValue(array, forKey: "arrayDate")
-        
-        do{
-            try managedContext.save()
-            counterObjects.append(counter)
-        } catch let error as NSError{
-            print("Couldn't save \(error)")
-        }
-    }
-    */
     
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate

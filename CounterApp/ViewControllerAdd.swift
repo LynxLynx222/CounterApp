@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+//VIEW CONTROLLER TO ADD NEW COUNTER TO CORE DATA
+
 class ViewControllerAdd: UIViewController {
     @IBOutlet weak var textFieldTitle: UITextField!
     @IBOutlet weak var textFieldNumber: UITextField!
