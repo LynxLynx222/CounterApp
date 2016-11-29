@@ -104,12 +104,12 @@ class ViewControllerCounter: UIViewController {
     }
     
     func SetButtonColor(button : UIButton){
-        button1.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
-        button1.layer.borderColor = UIColor.grayColor().CGColor
-        button10.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
-        button10.layer.borderColor = UIColor.grayColor().CGColor
-        button100.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
-        button100.layer.borderColor = UIColor.grayColor().CGColor
+        button1.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
+        button1.layer.borderColor = UIColor.darkGrayColor().CGColor
+        button10.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
+        button10.layer.borderColor = UIColor.darkGrayColor().CGColor
+        button100.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
+        button100.layer.borderColor = UIColor.darkGrayColor().CGColor
         button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
         button.layer.borderColor = UIColor.whiteColor().CGColor
     }

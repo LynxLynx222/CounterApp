@@ -39,18 +39,20 @@ class ViewControllerAdd: UIViewController {
             return
         }
         
-        if(textFieldNumber.text == ""){
-            number = 0
-        }
-        else {
+        
+        if Int(textFieldNumber.text!) != nil{
             number = Int16(textFieldNumber.text!)!
         }
-        
-        if(textFieldGoal.text == ""){
-            goal = 0
+        else{
+            number = 0
         }
-        else {
+        
+        
+        if Int(textFieldGoal.text!) != nil{
             goal = Int16(textFieldGoal.text!)!
+        }
+        else{
+            goal = 0
         }
         
         SaveCounter(title, number: number, goal: goal)
