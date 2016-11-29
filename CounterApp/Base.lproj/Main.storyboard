@@ -171,7 +171,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mz-v2-iRZ">
-                                <rect key="frame" x="100" y="470" width="80" height="80"/>
+                                <rect key="frame" x="30" y="470" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="070-gP-dxx"/>
                                     <constraint firstAttribute="width" constant="80" id="qDY-0c-DTe"/>
@@ -185,7 +185,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmZ-8K-z0g">
-                                <rect key="frame" x="420" y="470" width="80" height="80"/>
+                                <rect key="frame" x="490" y="470" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="Gkn-Kp-lLP"/>
                                     <constraint firstAttribute="height" constant="80" id="kvU-VX-hUJ"/>
@@ -199,9 +199,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfA-0x-ZgA">
-                                <rect key="frame" x="394" y="294" width="166" height="146"/>
+                                <rect key="frame" x="414" y="360" width="166" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="146" id="c3n-VB-vZa"/>
+                                    <constraint firstAttribute="height" constant="100" id="c3n-VB-vZa"/>
                                     <constraint firstAttribute="width" constant="166" id="rr3-iy-gW8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
@@ -213,9 +213,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cON-Wh-Qot">
-                                <rect key="frame" x="40" y="290" width="170" height="150"/>
+                                <rect key="frame" x="20" y="360" width="170" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="DJR-3R-iGc"/>
+                                    <constraint firstAttribute="height" constant="100" id="DJR-3R-iGc"/>
                                     <constraint firstAttribute="width" constant="170" id="kGU-Iv-GDE"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
@@ -274,24 +274,25 @@
                         </subviews>
                         <color key="backgroundColor" red="0.29568513159999998" green="0.69605164990000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="29i-bW-KgX" firstAttribute="top" secondItem="yfA-0x-ZgA" secondAttribute="bottom" constant="30" id="1DX-e4-B4c"/>
+                            <constraint firstItem="29i-bW-KgX" firstAttribute="top" secondItem="yfA-0x-ZgA" secondAttribute="bottom" constant="10" id="1DX-e4-B4c"/>
                             <constraint firstItem="vEi-yG-icV" firstAttribute="top" secondItem="29i-bW-KgX" secondAttribute="bottom" constant="50" id="1KD-qi-QIu"/>
                             <constraint firstItem="29i-bW-KgX" firstAttribute="centerX" secondItem="YYm-73-wCK" secondAttribute="centerX" id="45g-pc-CDz"/>
-                            <constraint firstItem="cON-Wh-Qot" firstAttribute="leading" secondItem="YYm-73-wCK" secondAttribute="leadingMargin" constant="20" id="7zj-ND-Q8j"/>
+                            <constraint firstItem="cON-Wh-Qot" firstAttribute="leading" secondItem="YYm-73-wCK" secondAttribute="leadingMargin" id="7zj-ND-Q8j"/>
                             <constraint firstItem="W0U-1b-VBg" firstAttribute="top" secondItem="Gee-SX-xkp" secondAttribute="bottom" constant="34" id="9aA-Xy-c0R"/>
                             <constraint firstItem="Gee-SX-xkp" firstAttribute="centerX" secondItem="YYm-73-wCK" secondAttribute="centerX" constant="6" id="A1w-XG-LQ0"/>
                             <constraint firstItem="Gee-SX-xkp" firstAttribute="top" secondItem="o4t-Wq-0go" secondAttribute="bottom" constant="8" id="C2A-mc-3Br"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yfA-0x-ZgA" secondAttribute="trailing" constant="20" id="DOY-Px-fBL"/>
-                            <constraint firstItem="XmZ-8K-z0g" firstAttribute="leading" secondItem="29i-bW-KgX" secondAttribute="trailing" constant="80" id="Kjc-Ya-Vbz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yfA-0x-ZgA" secondAttribute="trailing" id="DOY-Px-fBL"/>
                             <constraint firstItem="vEi-yG-icV" firstAttribute="top" secondItem="8mz-v2-iRZ" secondAttribute="bottom" constant="50" id="P43-Jc-Goy"/>
                             <constraint firstItem="vEi-yG-icV" firstAttribute="top" secondItem="XmZ-8K-z0g" secondAttribute="bottom" constant="50" id="Pc6-9J-0Hk"/>
                             <constraint firstItem="CDj-5x-ET2" firstAttribute="centerX" secondItem="YYm-73-wCK" secondAttribute="centerX" id="VxX-mD-FTa"/>
                             <constraint firstItem="CDj-5x-ET2" firstAttribute="top" secondItem="W0U-1b-VBg" secondAttribute="bottom" constant="23" id="X7F-hz-lCm"/>
+                            <constraint firstItem="29i-bW-KgX" firstAttribute="centerX" secondItem="YYm-73-wCK" secondAttribute="centerX" id="ZlW-iv-bjf"/>
+                            <constraint firstItem="8mz-v2-iRZ" firstAttribute="leading" secondItem="YYm-73-wCK" secondAttribute="leadingMargin" constant="10" id="cEo-Aa-FVd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XmZ-8K-z0g" secondAttribute="trailing" constant="10" id="hKy-pD-dac"/>
                             <constraint firstItem="Oij-yv-7Ra" firstAttribute="centerX" secondItem="YYm-73-wCK" secondAttribute="centerX" constant="7.5" id="mAs-Kw-Dcp"/>
-                            <constraint firstItem="29i-bW-KgX" firstAttribute="leading" secondItem="8mz-v2-iRZ" secondAttribute="trailing" constant="80" id="rGP-li-eQ5"/>
                             <constraint firstItem="W0U-1b-VBg" firstAttribute="centerX" secondItem="YYm-73-wCK" secondAttribute="centerX" constant="7" id="y7G-Ps-jpT"/>
                             <constraint firstItem="Oij-yv-7Ra" firstAttribute="top" secondItem="CDj-5x-ET2" secondAttribute="bottom" constant="23" id="yWQ-ne-O0w"/>
-                            <constraint firstItem="29i-bW-KgX" firstAttribute="top" secondItem="cON-Wh-Qot" secondAttribute="bottom" constant="30" id="zGj-vR-nV0"/>
+                            <constraint firstItem="29i-bW-KgX" firstAttribute="top" secondItem="cON-Wh-Qot" secondAttribute="bottom" constant="10" id="zGj-vR-nV0"/>
                         </constraints>
                     </view>
                     <connections>
